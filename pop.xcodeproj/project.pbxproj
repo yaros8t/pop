@@ -154,7 +154,6 @@
 /* Begin PBXFileReference section */
 		04C0670F1B8D577C00ED0525 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
 		0648E9DF7DFD7360DDB00E86 /* libPods-Tests-pop-tests-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-pop-tests-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0755AE531BEA15950094AB41 /* pop-tvos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "pop-tvos-Info.plist"; path = "pop-tvos-framework/pop-tvos-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0755AE581BEA15A80094AB41 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 		0755AE5A1BEA15B30094AB41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0755AE5C1BEA15BA0094AB41 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -313,14 +312,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0755AE641BEA16170094AB41 /* Supporting Files (tvOS) */ = {
-			isa = PBXGroup;
-			children = (
-				0755AE531BEA15950094AB41 /* pop-tvos-Info.plist */,
-			);
-			name = "Supporting Files (tvOS)";
-			sourceTree = "<group>";
-		};
 		0755AE981BEA197E0094AB41 /* Supporting Files (tvOS) */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,7 +397,6 @@
 				ECA0D5BE18D818C3003720DF /* WebCore */,
 				EC6885AF18C7BCA400C6194C /* Supporting Files (iOS) */,
 				EC68858618C7B60000C6194C /* Supporting Files (OS X) */,
-				0755AE641BEA16170094AB41 /* Supporting Files (tvOS) */,
 			);
 			path = pop;
 			sourceTree = "<group>";
@@ -874,12 +864,16 @@
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/pop/pop-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "$(PROJECT_DIR)/pop/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.pop;
 				PRODUCT_NAME = pop;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -890,12 +884,16 @@
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/pop/pop-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "$(PROJECT_DIR)/pop/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.pop;
 				PRODUCT_NAME = pop;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -906,12 +904,16 @@
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/pop/pop-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "$(PROJECT_DIR)/pop/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.pop;
 				PRODUCT_NAME = pop;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Profile;
 		};
